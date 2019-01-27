@@ -40,8 +40,8 @@ img:hover {
 }
 
 .profile-pic{
-    width: 300px;
-    height: 300px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     transition: .5s all;
     -webkit-animation: glow 5s ease-in-out infinite alternate;
@@ -88,7 +88,7 @@ body {
 .sections {
     /*position: absolute;*/
     float: left;
-    padding: 10px;
+    padding: 5px;
 }
 
 .row:after {
@@ -100,16 +100,16 @@ body {
 .container{
     position: absolute;
     display: grid;
-    grid-template: 1fr 1fr 1fr/ repeat(3, 1fr);
-    grid-gap: 10px;
+    grid-template: repeat(3, 1fr)/ repeat(3 , 1fr);
+    grid-gap: 5px;
     grid-template-areas: "picture picture picture"
                         "name name name"
                         "work social communities";
 }
 
 .item {
-    padding: 10px;
-    font-size: 5em;
+    padding: 5px;
+    font-size: 2em;
     text-align: center;
 }
 
@@ -124,7 +124,7 @@ body {
 
 .name{
     grid-area: name;
-    font-size: 6em;
+    font-size: 3em;
     grid-column-start: 2;
     grid-column-end: 2;
     font-weight: bold;
@@ -145,11 +145,17 @@ body {
 }
 
 .ico{
-    width: 50px;
-    height: 50px;
+    width: 25px;
+    height: 25px;
 }
 
 p{
     margin: 0;
     padding: 0;
+}
+
+@supports (display: grid) {
+  .container > * {
+    margin: 0;
+  }
 }
