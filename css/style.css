@@ -100,7 +100,7 @@ body {
 .container{
     position: absolute;
     display: grid;
-    grid-template: repeat(3, 1fr)/ repeat(3 , 1fr);
+    grid-template: repeat(3, 1fr)/ repeat(3 , 8fr);
     grid-gap: 5px;
     grid-template-areas: "picture picture picture"
                         "name name name"
@@ -114,7 +114,7 @@ body {
 }
 
 .subsection {
-    text-decoration: underline;
+    text-decoration: none;
 }
 .picture{
     grid-area: picture;
@@ -158,4 +158,20 @@ p{
   .container > * {
     margin: 0;
   }
+}
+
+/*desktop first*/
+
+@media screen and (max-width:768px) {
+    .container{
+        display: grid;
+        grid-template: repeat(1, 1fr)/ repeat(auto-fit, minmax(160px, 1fr));
+        grid-gap: 5px;
+        grid-template-areas: "picture"
+                            "name"
+                            "work"
+                            "social"
+                            "communities";
+        align-items: center;
+    }
 }
