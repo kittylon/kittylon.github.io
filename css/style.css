@@ -48,6 +48,7 @@ img:hover {
     -webkit-animation: glow 5s ease-in-out infinite alternate;
     -moz-animation: glow 5s ease-in-out infinite alternate;
     animation: glow 5s ease-in-out infinite alternate;
+    object-fit: cover;
 }
 
 @-webkit-keyframes glow {
